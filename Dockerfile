@@ -33,8 +33,8 @@ RUN rosdep init && \
 # Setup ROS environment variables
 ENV ROS_DISTRO noetic
 ENV ROS_ROOT /opt/ros/noetic
-ENV ROS_MASTER_URI=http://192.168.178.60:11311
-ENV ROS_IP=192.168.178.77
+ENV ROS_MASTER_URI=http://192.168.1.1:11311
+ENV ROS_IP=192.168.2.11
 ENV ROS_VERSION 1
 
 # Set up environment variables

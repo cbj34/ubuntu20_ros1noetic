@@ -24,6 +24,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     python3-rosdep \
     python3-rosinstall \
     python3-vcstools \
+    nano
     && rm -rf /var/lib/apt/lists/*
 
 # Initialize rosdep

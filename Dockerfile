@@ -39,6 +39,7 @@ ENV ROS_IP=192.168.2.11
 ENV ROS_VERSION 1
 
 COPY bridge/bridge.yaml /bridge.yaml
+RUN rosparam load bridge.yaml
 
 # Set up environment variables
 ENV LANG C.UTF-8

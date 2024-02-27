@@ -38,7 +38,7 @@ ENV ROS_MASTER_URI=http://192.168.1.1:11311
 ENV ROS_IP=192.168.2.11
 ENV ROS_VERSION 1
 
-COPY bridge/bridge.yaml >  /bridge.yaml
+COPY bridge/bridge.yaml /bridge.yaml
 
 # Set up environment variables
 ENV LANG C.UTF-8

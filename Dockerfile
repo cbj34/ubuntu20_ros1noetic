@@ -41,11 +41,12 @@ ENV ROS_VERSION 1
 COPY bridge/bridge.yaml /bridge.yaml
 # RUN rosparam load /bridge.yaml Can only be loaded with active roscore
 
-RUN source /opt/ros/noetic/setup.bash
-
 # Set up environment variables
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
+
+
+RUN source /opt/ros/noetic/setup.bash
 
 # Set up entrypoint
 CMD ["bash"]

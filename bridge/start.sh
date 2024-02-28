@@ -4,7 +4,7 @@
 source /opt/ros/noetic/setup.bash
 
 # Load the ROS parameters from bridge.yaml
-rosparam load /path/to/bridge.yaml
+rosparam load /bridge.yaml
 
 # Execute any additional commands here if needed
 # Example:

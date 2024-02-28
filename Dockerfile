@@ -46,7 +46,7 @@ ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 
 
-RUN source /opt/ros/noetic/setup.bash
+ENTRYPOINT ["/opt/ros/noetic/setup.bash"]
 
 # Set up entrypoint
 CMD ["bash"]

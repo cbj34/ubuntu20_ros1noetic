@@ -5,7 +5,7 @@ source /opt/ros/noetic/setup.bash
 
 # Use the environment variables provided, or default to localhost if not set
 export ROS_MASTER_URI=${ROS_MASTER_URI:-http://192.168.1.123:11311}
-export ROS_IP=${ROS_IP:-192.168.2.211}
+export ROS_IP=${ROS_IP:-192.168.1.211}
 
 echo "ROS_MASTER_URI is set to: $ROS_MASTER_URI"
 echo "ROS_IP is set to: $ROS_IP"

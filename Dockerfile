@@ -30,15 +30,17 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys F42ED6FBAB
 
 # Initialize rosdep (not needed if everything is installed by apt)
 # RUN rosdep init && \
-    rosdep update
+#    rosdep update
 
 # Setup ROS environment variables
 ENV ROS_DISTRO=noetic
 ENV ROS_VERSION=1
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
-ENV ROS_MASTER_URI=http://192.168.1.123:11311
-ENV ROS_IP=192.168.2.211
+
+# Set in start.sh
+# ENV ROS_MASTER_URI=http://192.168.1.123:11311
+# ENV ROS_IP=192.168.2.211
 
 COPY bridge/bridge.yaml /bridge.yaml
 # RUN rosparam load /bridge.yaml Can only be loaded with active roscore

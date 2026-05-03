@@ -48,7 +48,6 @@ COPY bridge/bridge.yaml /bridge.yaml
 # File setup
 COPY bridge/start.sh /start.sh
 RUN chmod +x /start.sh
-ENTRYPOINT ["/start.sh"]
 
 # Set up entrypoint
 ENTRYPOINT ["/start.sh"]

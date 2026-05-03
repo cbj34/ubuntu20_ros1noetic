@@ -1,26 +1,33 @@
 name: Build multi-platform Docker image and push to dockerhub
- 
+
 on:
-  push: {}
- 
+  push:
+    branches:
+      - main
+
 jobs:
   build-with-docker:
     name: Build multi-platform Docker image
-    runs-on: ubuntu-20.04
+    # Use ubuntu-latest (currently 24.04 or newer) instead of 20.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+          
       - uses: docker/setup-qemu-action@v3
       - uses: docker/setup-buildx-action@v3
+      
       - name: Build and push Docker image
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           context: .
-          platforms: linux/arm64
+          # You can keep platforms: linux/amd64,linux/arm64 if you need cross-builds
+          platforms: linux/amd64,linux/arm64
           cache-from: type=gha
           cache-to: type=gha,mode=max
           file: ./Dockerfile

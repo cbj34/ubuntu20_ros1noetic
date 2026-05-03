@@ -28,7 +28,7 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys F42ED6FBAB
     nano \
     && rm -rf /var/lib/apt/lists/*
 
-# Initialize rosdep (not needed if everything is installed by apt)
+# Initialize rosdep (not needed if everything is installed by apt and not build step in docker file)
 # RUN rosdep init && \
 #    rosdep update
 

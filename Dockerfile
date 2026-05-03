@@ -1,5 +1,7 @@
 # Use the official Ubuntu 20.04 image for arm64v8
-FROM arm64v8/ubuntu:20.04
+# FROM arm64v8/ubuntu:20.04
+# Generic
+FROM ros:noetic-ros-base-focal
 
 # Set the shell to non-interactive
 ENV DEBIAN_FRONTEND=noninteractive

@@ -28,8 +28,8 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys F42ED6FBAB
     nano \
     && rm -rf /var/lib/apt/lists/*
 
-# Initialize rosdep
-RUN rosdep init && \
+# Initialize rosdep (not needed if everything is installed by apt)
+# RUN rosdep init && \
     rosdep update
 
 # Setup ROS environment variables

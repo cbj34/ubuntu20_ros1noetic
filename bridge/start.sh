@@ -3,6 +3,12 @@
 # Source the setup script
 source /opt/ros/noetic/setup.bash
 
+#Start roscore
+roscore &
+
+#Wait for roscore
+sleep 5
+
 # Load the ROS parameters from bridge.yaml
 rosparam load /bridge.yaml
 

@@ -1,6 +1,8 @@
 topics:
-  -
-    topic: /diffbot_base_controller/cmd_vel_unstamped # Topic name on both ROS 1 and ROS 2
+  - topic: /diffbot_base_controller/cmd_vel_unstamped # Topic name on both ROS 1 and ROS 2
     type: geometry_msgs/msg/Twist  # Type of topic to bridge
     queue_size: 1  # Queue size
+  - topic: /test_bool
+    type: std_msgs/msg/Bool
+    queue_size: 1
 
